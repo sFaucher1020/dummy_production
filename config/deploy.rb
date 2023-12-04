@@ -1,10 +1,10 @@
 set :application, "production_demo"
-        set :repo_url, "git@github.com:sFaucher1020/dummy_production.git"
+set :repo_url, "git@github.com:sFaucher1020/dummy_production.git"
 
-        # Deploy to the user's home directory
-        set :deploy_to, "/home/deploy/#{fetch :application}"
+# Deploy to the user's home directory
+set :deploy_to, "/home/deploy/#{fetch :application}"
 
-        append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
 
-        # Only keep the last 5 releases to save disk space
-        set :keep_releases, 5
+# Only keep the last 5 releases to save disk space
+set :keep_releases, 5
